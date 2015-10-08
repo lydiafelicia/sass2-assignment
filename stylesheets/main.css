@@ -1,0 +1,181 @@
+body {
+  background-color: white;
+  font: normal 18px Helvetica,arial,sans-serif;
+  color: gray; }
+  @media all and (min-width: 420px) {
+    body {
+      background-color: pink; } }
+  @media all and (min-width: 600px) {
+    body {
+      background-color: green; } }
+
+#extra {
+  display: none; }
+  @media all and (min-width: 420px) {
+    #extra {
+      display: block;
+      float: none;
+      width: 100%; } }
+
+.col {
+  border: 1px solid black; }
+  @media all and (min-width: 420px) {
+    .col {
+      float: left;
+      width: 40%; } }
+  @media all and (min-width: 600px) {
+    .col {
+      background-color: green;
+      float: right;
+      width: 80%; } }
+
+input {
+  font-size: 20px; }
+  input::-webkit-input-placeholder {
+    color: #ff8080; }
+  input::-moz-placeholder {
+    color: #ff8080; }
+  input:-moz-placeholder {
+    color: #ff8080; }
+  input:-ms-input-placeholder {
+    color: #ff8080; }
+
+h1 {
+  font-size: 20px; }
+
+.cell-1 {
+  width: 10%;
+  border: 1px solid red; }
+
+.cell-2 {
+  width: 20%;
+  border: 1px solid red; }
+
+.cell-3 {
+  width: 30%;
+  border: 1px solid red; }
+
+.cell-4 {
+  width: 40%;
+  border: 1px solid red; }
+
+.cell-5 {
+  width: 50%;
+  border: 1px solid red; }
+
+.cell-6 {
+  width: 60%;
+  border: 1px solid red; }
+
+.cell-7 {
+  width: 70%;
+  border: 1px solid red; }
+
+.cell-8 {
+  width: 80%;
+  border: 1px solid red; }
+
+.cell-9 {
+  width: 90%;
+  border: 1px solid red; }
+
+.cell-10 {
+  width: 100%;
+  border: 1px solid red; }
+
+.cell-11 {
+  width: 110%;
+  border: 1px solid red; }
+
+.cell-12 {
+  width: 120%;
+  border: 1px solid red; }
+
+.cell-13 {
+  width: 130%;
+  border: 1px solid red; }
+
+.cell-14 {
+  width: 140%;
+  border: 1px solid red; }
+
+.cell-15 {
+  width: 150%;
+  border: 1px solid red; }
+
+.cell-16 {
+  width: 160%;
+  border: 1px solid red; }
+
+.cell-17 {
+  width: 170%;
+  border: 1px solid red; }
+
+.cell-18 {
+  width: 180%;
+  border: 1px solid red; }
+
+.cell-19 {
+  width: 190%;
+  border: 1px solid red; }
+
+.cell-20 {
+  width: 200%;
+  border: 1px solid red; }
+
+.text-size-1 {
+  font-size: 12px; }
+
+.text-size-2 {
+  font-size: 24px; }
+
+.text-size-3 {
+  font-size: 36px; }
+
+.text-size-4 {
+  font-size: 48px; }
+
+.text-size-5 {
+  font-size: 60px; }
+
+.text-size-6 {
+  font-size: 72px; }
+
+.color-red {
+  color: red; }
+
+.color-green {
+  color: green; }
+
+.color-blue {
+  color: blue; }
+
+.list-disc {
+  list-style-type: disc; }
+
+.list-circle {
+  list-style-type: circle; }
+
+.list-decimal {
+  list-style-type: decimal; }
+
+.alert, .alert-regular, .alert-serious {
+  background-color: grey;
+  color: blue;
+  font-size: 24px; }
+
+.alert-serious {
+  background-color: red; }
+
+.button-primary, .button-secondary, .button-disabled {
+  background-color: pink;
+  font-size: 24px;
+  color: #f4f4f4; }
+
+.button-secondary {
+  background-color: red; }
+
+.button-disabled {
+  background-color: grey; }
+
+/*# sourceMappingURL=main.css.map */

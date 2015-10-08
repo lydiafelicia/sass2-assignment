@@ -1,0 +1,117 @@
+@import 'bourbon/bourbon';
+@import '_partials/mixins';
+
+body{
+	background-color: white;
+	font:normal 18px Helvetica,arial,sans-serif;
+	color: gray;
+
+	@include breakpoint(small){
+		background-color:pink;
+	}
+
+	@include breakpoint(med){
+		background-color:green;
+	}
+}
+
+#extra{
+	display: none;
+	@media all and(min-width: 420px){
+		display:block;
+		float: none;
+		width: 100%;
+	}
+}
+
+.col{
+	border: 1px solid black;
+
+	@include breakpoint(small){
+		float: left;
+		width: 40%
+	}
+
+	@include breakpoint(med){
+		background-color:green;
+		float: right;
+		width: 80%
+	}
+}
+
+
+
+
+
+input{
+	font-size: 20px;
+
+	@include placeholder{
+		color: tint(red,50%);
+	}
+}
+
+$text-size:small;
+
+h1{
+	@if $text-size == big {font-size: 100px;}
+	@else if $text-size == small {font-size: 20px;}
+}
+
+@for $i from 1 through 20{
+	.cell-#{$i} {
+		width: 10% * $i;
+		border : 1px solid red;
+	}
+}
+
+@for $i from 1 through 6{
+	.text-size-#{$i} {
+		font-size: 12px * $i;
+	}
+}
+
+@each $color in red, green, blue{
+	.color-#{$color} {
+		color: $color;
+		}
+	}
+
+@each $list in disc, circle, decimal{
+	.list-#{$list} {
+		list-style-type: $list;
+		}
+	}
+
+.alert{
+	background-color: grey;
+	color: blue;
+	font-size: 24px;
+}
+
+.alert-regular{
+	@extend .alert;
+	
+}
+.alert-serious{
+	@extend .alert;
+	background-color: red;
+}
+
+
+.button-primary{
+	background-color: pink;
+	font-size: 24px;
+	color: #f4f4f4;
+}
+
+.button-secondary{
+	@extend .button-primary;
+	background-color: red;
+
+}
+
+.button-disabled{
+	@extend .button-primary;
+	background-color: grey;
+}
