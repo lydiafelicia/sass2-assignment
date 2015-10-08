@@ -3,21 +3,98 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Hello World</title>
+		<title>Lydia's UI Kit</title>
 		<link rel="stylesheet" href="stylesheets/main.css">
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+
 	</head>
 	<body>
-		Hello World
-		 <input type="text" placeholder="First name">
-
-		 <div id="extra">
-		 <p> display on desktop only </p>
-		 </div>
-
-		<div class ="col">
-		<p>ASDF</p>
+	<div class="container">
+		<div class ="title">
+		<h2 style="color:#56B1E6">LYDIA'S</h2>
+		<h4 style="color:#56B1E6">WEB UI KIT</h4>
+		<hr width="13%" align="left" color="#56B1E6">
+		<br>
 		</div>
+
+
+		
+		<div class ="col">
+		<!-- HEADINGS --> 
+		<h4>HEADINGS</h4>
+		<hr width="5%" align="left" color="#56B1E6">
+		<h1>Heading 1</h1>
+		<h2>Heading 2</h2>
+		<h3>Heading 3</h3>
+		<h4>Heading 4</h4>
+		<p>This is a paragraph<p>
+		<a class="link" href="#">this is a link</a>
+		<br>
+		<!-- SOCIAL MEDIA --> 
+		<h3>SOCIAL MEDIA</h3>
+		<hr width="13%" align="left" color="#56B1E6">
+		<br>
+		<a href="#"><img class="social-icons" src="icons/facebook.png"></a>
+		<a href="#"><img class="social-icons" src="icons/twitter.png"></a>
+		<a href="#"><img class="social-icons" src="icons/instagram.png"></a>
+		<br>
+		</div>
+
+
+		
+		<div class ="col">
+		<!-- BUTTONS --> 
+		<h4>BUTTONS</h4>
+		<hr width="5%" align="left" color="#56B1E6">
+		<br>
+		<button class="btn-primary">Primary</button>
+		<button class="btn-info">Info</button>
+		<button class="btn-success">Success</button>
+		<button class="btn-danger">Danger</button>
+		<br>
+		<button class="btn-disabled" align-margintop="10px">Disabled</button>
+
+		<!-- ALERTS --> 
+		<h4>ALERTS</h4>
+		<hr width="5%" align="left" color="#56B1E6">
+		<p class="alert-primary">This is the primary alert.</p>
+		<p class="alert-info">This is the info alert.</p>
+		<p class="alert-success">This is the success alert.</p>
+		<p class="alert-warning">This is the warning alert.</p>
+		<p class="alert-danger">This is the danger alert.</p>
+		<br>
+		
+		</div>
+
+		<!-- FORMS --> 
+		<div class ="col">
+		<h4>FORMS</h4>
+		<hr width="5%" align="left" color="#56B1E6">
+		<p>text input</p>
+		<input type="text" placeholder="type here" class="text-input">
+		<br>
+		<p>options</p>
+		<div class="option-container">
+			<select name="option" class="option-custom">
+		    <option value="1">Choose me 1</option>
+		    <option value="2">Choose me 2</option>
+		    <option value="3">Choose me 3</option>
+		  	</select>
+	  	</div>
+		<p>text area</p>
+		<textarea cols="30" rows="10" placeholder="type here" class="text-textarea"></textarea>
+		<br>
+		<br>
+
+		<button class="btn-primary">Submit</button>
+		</div>
+					
+	</div>
+	<br>
+	<br>
+	<br>
+
 
 	</body>
 </html>

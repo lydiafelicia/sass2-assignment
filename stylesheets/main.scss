@@ -1,117 +1,173 @@
 @import 'bourbon/bourbon';
-@import '_partials/mixins';
+@import '_partials/variables';
+@import '_partials/buttons';
 
 body{
-	background-color: white;
-	font:normal 18px Helvetica,arial,sans-serif;
-	color: gray;
+	background-color: #f4f4f4;
+	font-family: Helvetica;
 
-	@include breakpoint(small){
-		background-color:pink;
 	}
 
-	@include breakpoint(med){
-		background-color:green;
-	}
+.container{
+	margin-right: auto;
+	margin-left: 120px;
 }
 
-#extra{
-	display: none;
-	@media all and(min-width: 420px){
-		display:block;
-		float: none;
-		width: 100%;
-	}
+.title{
+	width: 100%;
 }
-
 .col{
-	border: 1px solid black;
+	width: 33.3%;
+	float: left;
+	display: inline-block;
 
-	@include breakpoint(small){
-		float: left;
-		width: 40%
-	}
-
-	@include breakpoint(med){
-		background-color:green;
-		float: right;
-		width: 80%
-	}
 }
 
+/*HEADINGS*/
 
+h1 {
+  color: $color-gray;
+  font-family: Helvetica;
+  font-size: 28pt;
+  letter-spacing: $normal-spacing; }
 
+h2 {
+  @extend h1;	
+  font-size: 18pt; }
 
+h3 {
+  @extend h1;
+  font-size: 14pt; }
 
-input{
-	font-size: 20px;
+h4 {
+  @extend h1;
+  font-size: 12pt; }
 
-	@include placeholder{
-		color: tint(red,50%);
-	}
-}
+ p{
+ 	font-size: 12px;
+ 	font-weight: lighter;
+ 	color: $color-gray;
+ }
 
-$text-size:small;
-
-h1{
-	@if $text-size == big {font-size: 100px;}
-	@else if $text-size == small {font-size: 20px;}
-}
-
-@for $i from 1 through 20{
-	.cell-#{$i} {
-		width: 10% * $i;
-		border : 1px solid red;
-	}
-}
-
-@for $i from 1 through 6{
-	.text-size-#{$i} {
-		font-size: 12px * $i;
-	}
-}
-
-@each $color in red, green, blue{
-	.color-#{$color} {
-		color: $color;
+.link{
+	font-size: 14px;
+	color: $color-blue;
+	text-decoration: none;
+	transition-duration: 0.3s;
+	&:hover{
+		color: $darker-blue;
+		text-transform: uppercase;
 		}
-	}
+}
 
-@each $list in disc, circle, decimal{
-	.list-#{$list} {
-		list-style-type: $list;
-		}
-	}
+/*ALERTS*/
 
 .alert{
-	background-color: grey;
-	color: blue;
-	font-size: 24px;
+	padding: 10px;
+	width: 250px;
+	background-color: $color-blue;
+	color: $color-white;
+	font-size: 12px;
 }
 
-.alert-regular{
+.alert-primary{
 	@extend .alert;
 	
 }
-.alert-serious{
+
+.alert-info{
 	@extend .alert;
-	background-color: red;
+	background-color: #76CCE6;
+}
+
+.alert-success{
+	@extend .alert;
+	background-color: #2ecc71;
 }
 
 
-.button-primary{
-	background-color: pink;
-	font-size: 24px;
-	color: #f4f4f4;
+.alert-warning{
+	@extend .alert;
+	background-color: #f1c40f;
 }
 
-.button-secondary{
-	@extend .button-primary;
-	background-color: red;
+.alert-danger{
+	@extend .alert;
+	background-color: #c0392b;
+}
+
+/*FORMS*/
+
+.text-input{
+	padding-left: 6px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	width: 57%;
+	border: solid $color-blue 2px;
+	background-color: transparent;
+	color: $color-gray;
+	transition-duration: 0.4s;
+	&:focus {
+    outline: $darker-blue solid 2px;
+	}
+}
+
+.text-textarea{
+	@extend .text-input;
+}
+
+.option-custom{
+	padding-left: 6px;
+	list-style-type: none;
+	width: 95%;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	overflow: hidden;
+	background-color: transparent;
+	border: 2px solid transparent;
+	color: $color-gray;
+	transition-duration: 0.4s;
+	&:focus {
+    outline: none;
+    overflow: hidden;
+	}
 
 }
 
-.button-disabled{
-	@extend .button-primary;
-	background-color: grey;
+.option-custom select{
+	padding-top: 6px;
+	padding-bottom: 6px;
+    width: 95%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+
+.option-container{
+	padding-top: 6px;
+	padding-bottom: 6px;
+	width:58%;
+	border: 2px solid $color-blue;
+	background-color: transparent;
+	color: $color-gray;
+	transition-duration: 0.4s;
+	&:focus {
+    outline: $darker-blue solid 2px;
+	}
+}
+
+/*SOCIAL MEDIAS*/
+.social-icons{
+	width: 35px;
+	height: 35px;
+	margin-right: 5px;
 }
